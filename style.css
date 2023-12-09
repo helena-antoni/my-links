@@ -3,3 +3,100 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    font-size: 62.5%;  
+}
+body *{ 
+    font-family: 'Popins', sans-serif; 
+    max-width:36rem; 
+}
+
+body {
+    font-size: 1.6rem;   
+    background:  url(./assets/bg-mobile.jpg) no-repeat top center/cover; 
+} 
+
+main{ 
+    margin: auto; 
+    padding: 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+li, ul, p, a{
+    color: #fff;  
+    font-size: 1.6rem;
+    font-weight: 500; 
+    line-height: 2.4rem;
+    text-align: center;
+    justify-content: center; 
+}
+
+main #profile{  
+    padding-bottom: 2.4rem  ;  
+
+    margin: auto;
+    margin-top: 8rem; 
+}
+
+main #profile img{
+    width: 11.2rem;
+    border-radius: 50% !important;
+    background-color: #b988da;    
+    border: 2px solid rgba(255, 255, 255, 0.50) ;    
+}  
+ 
+main #profile h1:nth-child(2){  
+    font-size: 2.6rem;  
+    padding:2rem 0 .5rem;  
+    color: #fff;   
+    font-weight: 500;  
+}
+
+main #profile p:nth-child(3){ 
+    font-weight: 500;   
+    padding: 1rem 0;   
+    font-size: 1.6rem;  
+}
+ 
+ 
+
+main .links ul {
+    list-style: none;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  
+    padding: 2.4rem 0;
+  }
+
+main .links ul li a{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 24px;
+ 
+    background:  rgba(255, 255, 255, 0.10 );
+    border: 1px solid  rgba(255, 255, 255, 0.50) ;  
+    border-radius: 8px;
+
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(4px);   
+
+    text-decoration: none;
+
+    transition: background 0.2s; 
+}
+ 
+
+main .links a:hover{ 
+    background: rgba(255, 255, 255, 0.05) ; 
+    border: 1.5px solid #FFF; 
+    cursor:pointer
+}
+
