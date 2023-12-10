@@ -5,29 +5,56 @@
 }
 
 :root{
-    font-size: 62.5%;  
+    font-size: 62.5%; 
+    
+    --text-color:  #fff;
+    --text-color-footer: #3b2349;
+    --bg-url:  url(./assets/bg-mobile.jpg);
+    --strok-color:rgba(255, 255, 255, 0.50);
+    --surface-color:rgba(255, 255, 255, 0.10 ); 
+    --bg-image-and-footer: radial-gradient(circle, rgb(173, 158, 184) 0%, rgb(156, 130, 172) 35%); 
+    --img-filter: invert(1);
+    --img-border: rgba(255, 255, 255, 0.50);
 }
+
+.light{
+    --text-color: black;
+    --text-color-footer: #e9e2ec; 
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --strok-color: rgba(0, 0, 0, 0.50);
+    --surface-color: rgba(0, 0, 0, 0.05);  
+    --bg-image-and-footer: radial-gradient(circle,rgb(97, 77, 109) 0%,  rgb(97, 62, 122) 35%); 
+    --img-filter: invert(0);
+    --img-border: rgba(0, 0, 0, 0.50);
+
+}
+
 body *{ 
     font-family: 'Popins', sans-serif; 
-    max-width:36rem; 
 }
 
 body {
     font-size: 1.6rem;   
-    background:  url(./assets/bg-mobile.jpg) no-repeat top center/cover; 
+    background: var(--bg-url) no-repeat top center/cover;  
+} 
+ 
+#app{  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 } 
 
-main{ 
+main{   
+    padding: 2.4rem 2.4rem 3.9rem ; 
     margin: auto; 
-    padding: 2.4rem;
-
+    max-width:36rem;  
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-li, ul, p, a{
-    color: #fff;  
+li, ul, p, a, footer{
+    color:  var(--text-color);  
     font-size: 1.6rem;
     font-weight: 500; 
     line-height: 2.4rem;
@@ -35,24 +62,26 @@ li, ul, p, a{
     justify-content: center; 
 }
 
-main #profile{  
-    padding-bottom: 2.4rem  ;  
+li a img{
+    filter: var(--img-filter);
+}
 
+main #profile{    
     margin: auto;
-    margin-top: 8rem; 
+    margin-top: 1rem; 
 }
 
 main #profile img{
     width: 11.2rem;
     border-radius: 50% !important;
-    background-color: #b988da;    
-    border: 2px solid rgba(255, 255, 255, 0.50) ;    
+    background: var(--bg-image-and-footer);
+    border: 2px solid var(--img-border) ;    
 }  
  
 main #profile h1:nth-child(2){  
     font-size: 2.6rem;  
     padding:2rem 0 .5rem;  
-    color: #fff;   
+    color: var(--text-color);  
     font-weight: 500;  
 }
 
@@ -60,9 +89,7 @@ main #profile p:nth-child(3){
     font-weight: 500;   
     padding: 1rem 0;   
     font-size: 1.6rem;  
-}
- 
- 
+} 
 
 main .links ul {
     list-style: none;
@@ -71,7 +98,7 @@ main .links ul {
     flex-direction: column;
     gap: 1.6rem;
   
-    padding: 2.4rem 0;
+    padding: 1.4rem 0;
   }
 
  ul li a{  
@@ -82,8 +109,8 @@ main .links ul {
 
     padding: 16px 24px;
  
-    background:  rgba(255, 255, 255, 0.10 );
-    border: 1px solid  rgba(255, 255, 255, 0.50) ;  
+    background:  var(--surface-color);
+    border: 1px solid  var(--strok-color) ;  
     border-radius: 8px;
 
     backdrop-filter: blur(4px); 
@@ -96,7 +123,7 @@ main .links ul {
  
 main .links a:hover{ 
     background: rgba(255, 255, 255, 0.05) ; 
-    border: 1.5px solid #FFF; 
+    border: 1.5px solid var(--text-color); 
     cursor:pointer
 }
 
@@ -110,3 +137,16 @@ main .links img{
     height: 2rem;
 }
  
+footer{  
+    border-top: 1px dashed var(--text-color); 
+    border-bottom: 1px dashed var(--text-color);  
+    background:var(--bg-image-and-footer);    
+    padding: 2.4rem  ;
+	width:100%;  
+    background: var(bg-image-and-footer );
+}
+ 
+footer p{
+    color: var(--text-color-footer);
+    font-weight: bold;
+}
