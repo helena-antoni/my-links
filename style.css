@@ -74,10 +74,11 @@ main .links ul {
     padding: 2.4rem 0;
   }
 
-main .links ul li a{  
+ ul li a{  
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: .7rem;
 
     padding: 16px 24px;
  
@@ -91,12 +92,21 @@ main .links ul li a{
     text-decoration: none;
 
     transition: background 0.2s; 
-}
+} 
  
-
 main .links a:hover{ 
     background: rgba(255, 255, 255, 0.05) ; 
     border: 1.5px solid #FFF; 
     cursor:pointer
 }
 
+ion-icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+main .links img{
+    width: 2.3rem;
+    height: 2rem;
+}
+ 
