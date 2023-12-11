@@ -15,6 +15,8 @@
     --bg-image-and-footer: radial-gradient(circle, rgb(173, 158, 184) 0%, rgb(156, 130, 172) 35%); 
     --img-filter: invert(1);
     --img-border: rgba(255, 255, 255, 0.50);
+    --switch-img: url(./assets/moon-stars.svg);
+    --switch-mode:0;
 }
 
 .light{
@@ -26,6 +28,9 @@
     --bg-image-and-footer: radial-gradient(circle,rgb(97, 77, 109) 0%,  rgb(97, 62, 122) 35%); 
     --img-filter: invert(0);
     --img-border: rgba(0, 0, 0, 0.50);
+    --switch-img: url(./assets/sun.svg);
+    --switch-mode:1;
+
 
 }
 
@@ -45,7 +50,7 @@ body {
 } 
 
 main{   
-    padding: 2.4rem 2.4rem 3.9rem ; 
+    padding: 2.4rem 2.4rem 2.4rem ; 
     margin: auto; 
     max-width:36rem;  
     display: flex;
@@ -65,6 +70,8 @@ li, ul, p, a, footer{
 li a img{
     filter: var(--img-filter);
 }
+ 
+/** Profile **/
 
 main #profile{    
     margin: auto;
@@ -80,17 +87,60 @@ main #profile img{
  
 main #profile h1:nth-child(2){  
     font-size: 2.6rem;  
-    padding:2rem 0 .5rem;  
+    padding:1.5rem 0 .5rem;  
     color: var(--text-color);  
     font-weight: 500;  
 }
 
 main #profile p:nth-child(3){ 
     font-weight: 500;   
-    padding: 1rem 0;   
+    padding: .5rem 0;   
     font-size: 1.6rem;  
 } 
 
+/** Switch*/
+.switch{ 
+    /* display: flex;
+    align-items: center;
+    margin: auto; */ 
+    position: relative;
+
+    width: 6.4rem; 
+    margin: 0 auto;
+    padding: 2rem 0  ;
+}
+
+.switch button{
+    width: 3.2rem;
+    height: 3.2rem;
+    background: #fff no-repeat center;
+    border:0;
+    border-radius: 50%;
+    background-image: var(--switch-img);
+
+    position: absolute;
+    z-index: 1;
+    left: var(--switch-mode); 
+    
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.switch span{
+    display: block;
+    width:6.4rem;
+    height: 2.4rem; 
+     
+    border: 1px solid var(--surface-color);
+    background: var(--strok-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(.4rem);
+
+    border-radius: 999.9rem;
+}
+
+
+/** Links **/
 main .links ul {
     list-style: none;
   
@@ -137,11 +187,12 @@ main .links img{
     height: 2rem;
 }
  
+/** Footer **/
 footer{  
     border-top: 1px dashed var(--text-color); 
     border-bottom: 1px dashed var(--text-color);  
     background:var(--bg-image-and-footer);    
-    padding: 2.4rem  ;
+    padding: 2rem ;
 	width:100%;  
     background: var(bg-image-and-footer );
 }
