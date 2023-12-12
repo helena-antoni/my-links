@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="  ">
+<html lang="pt-br" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,9 +22,8 @@
             <p>Eu tenho 24 anos e estudo Desenvolvimento Front-End </p>
         </div>
 
-        <div class="switch">
-            <button>
-                 
+        <div class="switch" onclick="toggleMode()">
+            <button> 
             </button>
             <span>
                  
@@ -46,14 +45,14 @@
                 </li>
 
                 <li> 
-                    <a  target="_blank" href="#"> 
+                    <a href="#" onclick="portifolio()"> 
                         <ion-icon name="albums-outline"></ion-icon> Portifólio
                     </a> 
                 </li>
 
-                <li> 
-                    <a target= href="#">
-                        <ion-icon name="logo-discord"></ion-icon>helenaantoni
+                <li  > 
+                    <a  onclick="discord('disc')" id="disc">
+                        <ion-icon name="logo-discord"></ion-icon> helenaantoni
                     </a>
                 </li>
 
@@ -76,5 +75,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <script src="./script.js"></script>
 </body>
 </html>

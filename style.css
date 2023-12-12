@@ -29,9 +29,7 @@
     --img-filter: invert(0);
     --img-border: rgba(0, 0, 0, 0.50);
     --switch-img: url(./assets/sun.svg);
-    --switch-mode:1;
-
-
+    --switch-mode:1; 
 }
 
 body *{ 
@@ -175,7 +173,7 @@ main .links a:hover{
     background: rgba(255, 255, 255, 0.05) ; 
     border: 1.5px solid var(--text-color); 
     cursor:pointer
-}
+}  
 
 ion-icon{
     width: 2rem;
@@ -201,3 +199,4 @@ footer p{
     color: var(--text-color-footer);
     font-weight: bold;
 }
+
