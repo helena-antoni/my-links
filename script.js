@@ -22,7 +22,7 @@ function discord(disc){
     }
 }
 
-function portifolio(){
+function portfolio(){
     alert("Em desenvolvimento, por enquanto veja meu GitHub! ")
 }  
 
