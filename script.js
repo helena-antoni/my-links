@@ -2,7 +2,7 @@ function toggleMode(){
     const html = document.documentElement;
 
     html.classList.toggle('light');   
-}    
+}
 
 
 function discord(disc){
@@ -20,7 +20,7 @@ function discord(disc){
     } catch (err) {
         console.log('Não foi possível copiar!');
     }
-} 
+}
 
 function portifolio(){
     alert("Em desenvolvimento, por enquanto veja meu GitHub! ")

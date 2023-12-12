@@ -9,20 +9,24 @@
     
     --text-color:  #fff;
     --text-color-footer: #3b2349;
-    --bg-url:  url(./assets/bg-mobile.jpg);
+    --bg-url:  url(./assets/bg-desktop.webp);
+    --bg-url-mobile:  url(./assets/bg-mobile.webp);
+
     --strok-color:rgba(255, 255, 255, 0.50);
     --surface-color:rgba(255, 255, 255, 0.10 ); 
     --bg-image-and-footer: radial-gradient(circle, rgb(173, 158, 184) 0%, rgb(156, 130, 172) 35%); 
     --img-filter: invert(1);
     --img-border: rgba(255, 255, 255, 0.50);
-    --switch-img: url(./assets/moon-stars.svg);
+    --switch-img: url(./assets/moon-stars.webp);
     --switch-mode:0;
 }
 
 .light{
     --text-color: black;
     --text-color-footer: #e9e2ec; 
-    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --bg-url: url(./assets/bg-desktop-light.webp);
+    --bg-url-mobile:  url(./assets/deus.webp);
+
     --strok-color: rgba(0, 0, 0, 0.50);
     --surface-color: rgba(0, 0, 0, 0.05);  
     --bg-image-and-footer: radial-gradient(circle,rgb(97, 77, 109) 0%,  rgb(97, 62, 122) 35%); 
@@ -98,6 +102,9 @@ main #profile p:nth-child(3){
 
 } 
 
+.switch *{ 
+    cursor:pointer;
+}
 /** Switch*/
 .switch{ 
     /* display: flex;
@@ -121,6 +128,7 @@ main #profile p:nth-child(3){
     position: absolute;
     z-index: 1;
     left: var(--switch-mode); 
+    
     
     top:50%;
     transform: translateY(-50%);
@@ -204,19 +212,27 @@ footer{
 footer p{
     color: var(--text-color-footer);
     font-weight: bold;
-}
+} 
+  
 
-@media(min-width:541px){
+@media(min-width:541px){ 
     main{
         max-width: 541px; 
+
     }
-}
+    body{ 
+        background-image: var(--bg-url-mobile);
+    }
+} 
  
 @media(min-width:768px){   
+    body{ 
+        background-image: var(--bg-url);
+    }
     main{
         max-width: 768px;  
-    }
-    
+
+    } 
 } 
  
  
