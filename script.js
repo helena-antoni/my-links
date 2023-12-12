@@ -24,6 +24,6 @@ function discord(disc){
 
 function portifolio(){
     alert("Em desenvolvimento, por enquanto veja meu GitHub! ")
-}
+}  
 
 
