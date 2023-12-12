@@ -30,32 +30,24 @@
     --img-border: rgba(0, 0, 0, 0.50);
     --switch-img: url(./assets/sun.svg);
     --switch-mode:1; 
-}
-
-body *{  
-    
-
-    font-family: 'Lato', sans-serif;
-font-family: 'Poppins', sans-serif;
-}
+} 
 
 body {
     font-size: 1.6rem;   
-    background: var(--bg-url) no-repeat top center/cover;  
-
-
+    background: var(--bg-url) no-repeat top center/cover;   
+    font-family: 'Lato', serif;  
 } 
  
 #app{  
-    min-height: 100vh;
+    height: 100vh; 
     display: flex;
     flex-direction: column;
 } 
 
-main{   
-    padding: 2.4rem 2.4rem 2.4rem ; 
-    margin: auto; 
+main{    
     max-width:36rem;  
+    padding: 1.5rem 2.4rem 2.4rem ; 
+    margin: auto; 
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -77,12 +69,12 @@ li a img{
 /** Profile **/
 
 main #profile{    
-    margin: auto;
-    margin-top: 1rem; 
+    margin: 0;
+    padding: 1rem; 
 }
 
 main #profile img{
-    width: 11.2rem;
+    width: 13rem;
     border-radius: 50% !important;
     background: var(--bg-image-and-footer);
     border: 2px solid var(--img-border) ;    
@@ -92,7 +84,7 @@ main #profile h1:nth-child(2){
     font-size: 2.6rem;  
     font-size: clamp(2.6rem, 2vw + 0.7rem , 3rem);  
 
-    padding:1.5rem 0 0;  
+    padding:1.5rem 0 0;   
     color: var(--text-color);  
     font-weight: 700;
     
@@ -149,6 +141,10 @@ main #profile p:nth-child(3){
 
 
 /** Links **/
+
+main .links { 
+    font-family: 'Lato', serif;
+}
 main .links ul {
     list-style: none;
   
@@ -165,7 +161,7 @@ main .links ul {
     justify-content: center;
     gap: .7rem;
 
-    padding: 16px 24px;
+    padding: 1.6rem 2.4rem;
  
     background:  var(--surface-color);
     border: 1px solid  var(--strok-color) ;  
@@ -200,7 +196,7 @@ footer{
     border-top: 1px dashed var(--text-color); 
     border-bottom: 1px dashed var(--text-color);  
     background:var(--bg-image-and-footer);    
-    padding: 2rem ;
+    padding: 1rem ;
 	width:100%;  
     background: var(bg-image-and-footer );
 }
@@ -216,16 +212,11 @@ footer p{
     }
 }
  
-@media(min-width:768px){ 
+@media(min-width:768px){   
     main{
-        max-width: 768px; 
+        max-width: 768px;  
     }
- 
-    main #profile{
-        margin-bottom: 1rem;
-    }
-      
-    main .links{
-        margin-bottom: 2rem;
-    }
+    
 } 
+ 
+ 
