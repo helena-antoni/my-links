@@ -7,19 +7,15 @@ function toggleMode(){
 
 function discord(disc){
     var r = document.createRange();
-    r.selectNode(document.getElementById(disc));
+    r.selectNode(document.getElementById(disc));  
 
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(r);
-
-    try {
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-        console.log('Texto copiado com sucesso. ' + r);
-        alert("Nickname copiado, cole no seu Discord")
-    } catch (err) {
-        console.log('Não foi possível copiar!');
-    }
+    navigator.clipboard.writeText(r)
+      .then(() => {
+        console.log('Text successfully copied to clipboard');
+      })
+      .catch(err => {
+        console.error('Unable to copy text to clipboard', err);
+      });
 }
 
 function portfolio(){
