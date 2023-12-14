@@ -11,7 +11,7 @@ function discord(disc){
 
     navigator.clipboard.writeText(r)
       .then(() => {
-        console.log('Text successfully copied to clipboard');
+        alert("Nickname copiado, cole em seu Discord")
       })
       .catch(err => {
         console.error('Unable to copy text to clipboard', err);
