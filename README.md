@@ -38,6 +38,9 @@ O projeto Meus Links contém os Links de contato da dona do Repositório, Helena
 Ele foi baseado neste figma, foram feitas algumas modificações de tamanho e cores no layout.
 
 Você pode visualizar o layout através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). 
+<p align="center">
+  <img alt="meus links" src="./preview/figma-preview.png" width="100%">
+</p>
 
 É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
